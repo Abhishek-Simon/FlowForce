@@ -1,0 +1,50 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+.pytest_cache/
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.tmp/
+
+# Data outputs & logs (keep directories, ignore large artifacts)
+runs/
+*.zip
+*.tar.gz
+data/uploads/*
+!data/uploads/.gitkeep
+data/outputs/*
+!data/outputs/.gitkeep
+backend/data/outputs/*
+!backend/data/outputs/.gitkeep
+data/logs/*
+!data/logs/.gitkeep
+FINAL_TRAFFIC_DATASET/
+traffic-ml/FINAL_TRAFFIC_DATASET/
+*.mp4
+*.avi
+
+# Local SQLite Database
+traffic.db
+flowforce.db
+*.sqlite3
+*.db
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/

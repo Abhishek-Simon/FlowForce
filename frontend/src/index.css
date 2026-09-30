@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html.dark {
+    @apply bg-[#090d16] text-slate-200;
+  }
+
+  body {
+    @apply min-h-screen transition-colors duration-150;
+  }
+}
+
+@layer components {
+  /* Crisp Monochromatic Structural Panels */
+  .panel {
+    @apply bg-white dark:bg-[#0e1422] border border-slate-200 dark:border-[#1c273e] rounded-lg shadow-sm transition-colors;
+  }
+
+  .panel-header {
+    @apply px-3.5 py-2.5 border-b border-slate-200 dark:border-[#1c273e] bg-slate-50/70 dark:bg-[#121a2d] flex items-center justify-between transition-colors;
+  }
+
+  .panel-body {
+    @apply p-3.5;
+  }
+
+  /* Data Table */
+  .data-table {
+    @apply w-full text-left text-xs font-mono;
+  }
+  .data-table th {
+    @apply px-3 py-2 bg-slate-50 dark:bg-[#121a2d] text-slate-600 dark:text-slate-400 font-semibold uppercase tracking-wider border-b border-slate-200 dark:border-[#1c273e] text-[11px];
+  }
+  .data-table td {
+    @apply px-3 py-2 border-b border-slate-100 dark:border-[#1c273e]/60 text-slate-800 dark:text-slate-200;
+  }
+  .data-table tr:hover td {
+    @apply bg-slate-50/80 dark:bg-[#151f33];
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply bg-slate-900 hover:bg-slate-800 text-white dark:bg-blue-600 dark:hover:bg-blue-700 text-xs font-semibold px-3 py-1.5 rounded transition-colors flex items-center gap-1.5 font-mono shadow-sm active:translate-y-px;
+  }
+  .btn-secondary {
+    @apply bg-white dark:bg-[#151f33] hover:bg-slate-50 dark:hover:bg-[#1c2944] text-slate-700 dark:text-slate-300 text-xs font-medium px-3 py-1.5 rounded border border-slate-300 dark:border-[#243350] transition-colors flex items-center gap-1.5 font-mono shadow-sm;
+  }
+
+  /* Status Badges - Clean Neutral In Light Mode */
+  .status-pill-neutral {
+    @apply inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-mono font-medium bg-slate-100 dark:bg-[#162136] text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-[#283856];
+  }
+  .status-pill-green {
+    @apply inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-slate-100 text-slate-800 dark:bg-[#062d1f] dark:text-emerald-400 border border-slate-200 dark:border-[#0f5138];
+  }
+  .status-pill-amber {
+    @apply inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-slate-100 text-slate-800 dark:bg-[#2e1d05] dark:text-amber-400 border border-slate-200 dark:border-[#52340b];
+  }
+  .status-pill-red {
+    @apply inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-mono font-semibold bg-slate-100 text-red-600 dark:bg-[#3b0808] dark:text-red-400 border border-slate-200 dark:border-[#6b1414];
+  }
+}

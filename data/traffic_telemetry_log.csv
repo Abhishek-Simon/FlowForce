@@ -1,0 +1,6 @@
+timestamp,camera_id,junction_name,vehicle_count,pedestrian_count,queue_length,density_pct,traffic_score,congestion_level,emergency_detected
+1786819804,CAM-01,North Junction,24,4,6,72.0,68.4,HIGH,False
+1786820704,CAM-02,Central Plaza,14,16,2,48.0,44.0,MODERATE,False
+1786821604,CAM-03,East Corridor,19,2,5,62.0,59.0,MODERATE,False
+1786822504,CAM-04,South Station,9,5,1,32.0,28.0,LOW,False
+1786823404,CAM-01,North Junction,28,3,7,78.0,75.0,HIGH,True
